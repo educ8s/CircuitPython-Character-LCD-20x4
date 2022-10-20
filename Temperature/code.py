@@ -1,3 +1,7 @@
+# This script supports the Raspberry Pi Pico board
+# Raspberry Pi Pico: http://educ8s.tv/part/RaspberryPiPico
+# 20x4 I2C DISPLAY: http://educ8s.tv/part/20x4LCD
+
 import board, busio, microcontroller
 from lcd.lcd import LCD #Get this module here: https://github.com/dhalbert/CircuitPython_LCD
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface #Get this module here: https://github.com/dhalbert/CircuitPython_LCD
@@ -7,14 +11,14 @@ sda, scl = board.GP0, board.GP1
 i2c = busio.I2C(scl, sda)
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=4, num_cols=20)
 
-LT = bytearray((0b01111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111))
-UB = bytearray((0b11111, 0b11111, 0b11111, 0b00000, 0b00000, 0b00000, 0b00000, 0b00000))
-RT = bytearray((0b11110, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111))
-LL = bytearray((0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b01111))
-LB = bytearray((0b00000, 0b00000, 0b00000, 0b00000, 0b00000, 0b11111, 0b11111, 0b11111))
-LR = bytearray((0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11110))
-UMB = bytearray ((0b11111, 0b11111, 0b11111, 0b00000, 0b00000, 0b00000, 0b11111, 0b11111))
-LMB = bytearray ((0b11111, 0b00000, 0b00000, 0b00000, 0b00000, 0b11111, 0b11111, 0b11111))
+LT = (0b01111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111)
+UB = (0b11111, 0b11111, 0b11111, 0b00000, 0b00000, 0b00000, 0b00000, 0b00000)
+RT = (0b11110, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111)
+LL = (0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b01111)
+LB = (0b00000, 0b00000, 0b00000, 0b00000, 0b00000, 0b11111, 0b11111, 0b11111)
+LR = (0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11110)
+UMB = (0b11111, 0b11111, 0b11111, 0b00000, 0b00000, 0b00000, 0b11111, 0b11111)
+LMB = (0b11111, 0b00000, 0b00000, 0b00000, 0b00000, 0b11111, 0b11111, 0b11111)
 
 def c_to_f(celsius):
     fahrenheit = (celsius * 1.8) + 32
