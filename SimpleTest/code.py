@@ -16,11 +16,6 @@ sda, scl = board.GP0, board.GP1
 i2c = busio.I2C(scl, sda)
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=4, num_cols=20) #If address 0x27 does not work try 0x3F
 
-lcd.create_char(0,phone)
-lcd.create_char(1,heart)
-lcd.create_char(2,speaker)
-lcd.create_char(3,smile)
-
 lcd.set_cursor_pos(0,3)
 lcd.print("Hello YouTube!")
 lcd.set_cursor_pos(1,8)
@@ -32,6 +27,11 @@ lcd.print("****")
 
 time.sleep(2)
 lcd.clear()
+
+lcd.create_char(0,phone)
+lcd.create_char(1,heart)
+lcd.create_char(2,speaker)
+lcd.create_char(3,smile)
 
 lcd.set_cursor_pos(0,0)
 lcd.print("Custom Characters")
