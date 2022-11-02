@@ -17,6 +17,7 @@ CircuitPython Character LCD 20x4 with pcf8574 I2C backpack.
 | 🌍 <a href="http://www.educ8s.tv">Website</a> | <br>
 </p>
 
+# Parts needed
 
 🛒 20x4 Character Display ▶ http://educ8s.tv/part/20x4LCD
 
