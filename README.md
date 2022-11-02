@@ -18,13 +18,10 @@ CircuitPython Character LCD 20x4 with pcf8574 I2C backpack.
 </p>
 
 
-# Parts Needed
-🛒 Arduino Uno ▶ http://educ8s.tv/part/ArduinoUno
+🛒 20x4 Character Display ▶ http://educ8s.tv/part/20x4LCD
 
-🛒 ST7789 Display ▶ http://educ8s.tv/part/st7789
-
-🛒 DS18B20 Temperature Sensor ▶ http://educ8s.tv/part/DS18B20
-
-🛒 Breadboard ▶ http://educ8s.tv/part/SmallBreadboard
+🛒 Raspberry Pi Pico ▶ http://educ8s.tv/part/RaspberryPiPico
 
 🛒 Wires ▶ http://educ8s.tv/part/Wires
+
+💖 Full disclosure: All of the links above are affiliate links. I get a small percentage of each sale they generate. Thank you for your support!
