@@ -3,7 +3,7 @@
 CircuitPython Character LCD 20x4 with pcf8574 I2C backpack.
 
 <p align="center">
-  <img src="demo.jpg" alt="ST7789 Thermometer" width="1280">
+  <img src="preview.jpg" alt="20x4 LCD Display" width="640">
 </p>
 
 <p align="center">
