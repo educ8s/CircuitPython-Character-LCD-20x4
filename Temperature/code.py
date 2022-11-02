@@ -11,6 +11,9 @@ sda, scl = board.GP0, board.GP1
 i2c = busio.I2C(scl, sda)
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=4, num_cols=20)
 
+
+# Create you own custom characters here: http://educ8s.tv/tools/lcd-character-creator/
+
 LT = (0b01111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111)
 UB = (0b11111, 0b11111, 0b11111, 0b00000, 0b00000, 0b00000, 0b00000, 0b00000)
 RT = (0b11110, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111, 0b11111)
